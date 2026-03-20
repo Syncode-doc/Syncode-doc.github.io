@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4 Form</title>
+    <script src="validation.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        .form-container {
+            width: 650px;
+            padding: 20px;
+            border: 1px solid #999;
+        }
+
+        .form-row {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: inline-block;
+            width: 170px;
+            vertical-align: top;
+        }
+
+        .inline-group {
+            display: inline-block;
+        }
+
+        #messages p {
+            margin: 8px 0;
+            font-weight: bold;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .orange {
+            color: orange;
+        }
+
+        button, input[type="reset"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <form id="myForm">
+            <div class="form-row">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+            </div>
+
+            <div class="form-row">
+                <label for="phone">Phone number:</label>
+                <input type="text" id="phone" name="phone" placeholder="(123)-456-7890">
+            </div>
+
+            <div class="form-row">
+                <label for="password">Enter Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <div class="form-row">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword">
+            </div>
+
+            <div class="form-row">
+                <label>Gender:</label>
+                <div class="inline-group">
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female" style="width:auto;">Female</label>
+
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male" style="width:auto;">Male</label>
+
+                    <input type="radio" id="other" name="gender" value="Other">
+                    <label for="other" style="width:auto;">Other</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="ageGroup">Age Group:</label>
+                <select id="ageGroup" name="ageGroup">
+                    <option value=""></option>
+                    <option value="<21">&lt; 21 years old</option>
+                    <option value="21-25">21 – 25 years old</option>
+                    <option value="26-35">26 – 35 years old</option>
+                    <option value="36-50">36 – 50 years old</option>
+                    <option value=">50">&gt; 50 years old</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label>Favorite Music Genre:</label>
+                <div class="inline-group">
+                    <input type="checkbox" id="pop" name="music" value="Pop">
+                    <label for="pop" style="width:auto;">Pop</label>
+
+                    <input type="checkbox" id="hiphop" name="music" value="Hiphop">
+                    <label for="hiphop" style="width:auto;">Hiphop</label>
+
+                    <input type="checkbox" id="jazz" name="music" value="Jazz">
+                    <label for="jazz" style="width:auto;">Jazz</label>
+
+                    <input type="checkbox" id="rock" name="music" value="Rock">
+                    <label for="rock" style="width:auto;">Rock</label>
+
+                    <input type="checkbox" id="classical" name="music" value="Classical Music">
+                    <label for="classical" style="width:auto;">Classical Music</label>
+
+                    <input type="checkbox" id="country" name="music" value="Country">
+                    <label for="country" style="width:auto;">Country</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label></label>
+                <button type="button" id="submitBtn">submit</button>
+                <input type="reset" id="clearBtn" value="clear">
+            </div>
+        </form>
+
+        <div id="messages"></div>
+    </div>
+
+</body>
+</html>
